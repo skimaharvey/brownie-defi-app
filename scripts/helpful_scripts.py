@@ -55,6 +55,7 @@ def get_contract(contract_name):
             a mock or the 'real' contract on a live network.
     """
     contract_type = contract_to_mock[contract_name]
+    global contract
     if network.show_active() in NON_FORKED_LOCAL_BLOCKCHAIN_ENVIRONMENTS:
         if len(contract_type) <= 0:
             deploy_mocks()
